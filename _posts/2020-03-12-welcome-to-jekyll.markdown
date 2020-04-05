@@ -14,6 +14,7 @@ Feel free to email me about anything you'd like to comment about my writing styl
 Just to lighten the tensions a bit, here's a funny take on viruses: 
 
 ![alt text](https://i.pinimg.com/originals/cc/56/3a/cc563a569dbad4f615e5a45c1c99f6c9.gif "It was a cool hacker GIF")
+
 _Credits: [Medium]_
 
 [Medium]: https://medium.com/@rchen8/cyber-security-and-physical-security-are-very-different-22e31a933907
