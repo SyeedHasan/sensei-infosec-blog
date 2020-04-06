@@ -8,7 +8,7 @@ categories: cloud aws cli
 
 In today's blog, we'll be discussing the **Amazon Web Services (AWS) CLI**, which we can use to do an array of tasks by the help of our command line!
 
-![AWS CLI](/assets/aws-logo.png)
+![AWS CLI](/assets/aws-cli/aws-logo.png)
 
 ## Versions of the AWS CLI
 
@@ -36,7 +36,7 @@ Once you've downloaded the MSI installer, simply follow the on-screen instructio
 
 To test your installation, simply open a command prompt and run the command: **_aws --version_**. Take a look at my output below: _(It's two hyphens not one, darn Jekyll)_
 
-![CLI](/assets/cli-v.png)
+![CLI](/assets/aws-cli/cli-v.png)
 
 **Is Windows unable to locate 'aws' or says it's not recognized as a command?** It's probably because your Environment Variables aren't set to include the executable in it's path. So, you can use this guide by AWS to setup your AWS executable on the path. Here's the link: [aws-path-setup]
 
@@ -50,7 +50,7 @@ Profiles allow you to store multiple AWS account credentials as different sets o
 
 I'll be setting up my _personal_ profile on the AWS CLI. To do this, AWS provides the 'configure' command. It can be used in conjunction with the profile parameter to setup a new profile. Here's how: 
 
-![CLI](/assets/configure-profile.png)
+![CLI](/assets/aws-cli/configure-profile.png)
 
 You'll be entering values for these four fields (don't worry if you don't get all of them at once). We'll start by entering the values for each one of these. The Access and Secret Keys are long-term credentials for a user which can be used to provide programmatic access or CLI access to a particular user without interruption. The secret key is like the password to your username. By default, the Secret Key is only shown once to the user and is then hidden for the remainder of the existence of that user. To get started, let's generate a pair of credentials for ourselves. We'll be using the IAM (Identity and Access Management) service of AWS for that.
 
@@ -60,35 +60,35 @@ Here are a few steps you can follow to quickly setup your user on the AWS consol
 
 Head over to the AWS console, _[aws-console]_. Log-in to your root user account by entering the credentials (and the MFA code if you've setup multi-factor authentication - which you should!). You will be greeted to the AWS console once you've successfully signed in.
   
-![CLI Greetings](/assets/console-greeting.png)
+![CLI Greetings](/assets/aws-cli/console-greeting.png)
 
 Next, let's search for the IAM in the services section and head over to it. From the left pane, head over to the user's section. You can skip this part if you've already setup a user and have your access and secret keys ready. 
 
-![IAM Users](/assets/iam-user-tab.png)
+![IAM Users](/assets/aws-cli/iam-user-tab.png)
 
 Click on 'Add User' to get started with the registration process:
 
-![IAM Add User](/assets/iam-add-user.png)
+![IAM Add User](/assets/aws-cli/iam-add-user.png)
 
 Enter a user-name, and tick the 'Programmatic Access' option to enable your CLI usage. This is the most important step. Please don't proceed without enabling this. 
 
-![IAM Add User](/assets/iam-todo-1.png)
+![IAM Add User](/assets/aws-cli/iam-todo-1.png)
 
 Next, you can either specify a console password right now or later as stated in the options. I've specified a strong password right away. Let's proceed. 
 
-![IAM Add User](/assets/iam-todo-2.png)
+![IAM Add User](/assets/aws-cli/iam-todo-2.png)
 
 Next, you can add your newly created user to a group. Groups allow you to bundle up permissions and easily assign them to a new user. Conversely, you can easily remove them as well. Simply remove the user from the group and the policies are long gone. Anyways, I'll be adding my user to the Admins group as I've already set that up. 
 
-![IAM Add User](/assets/iam-todo-3.png)
+![IAM Add User](/assets/aws-cli/iam-todo-3.png)
 
 Next, add tags if you have any. These are valuable pieces of information which can help you identify your users or why they were created. 
 
-![IAM Add User](/assets/iam-todo-4.png)
+![IAM Add User](/assets/aws-cli/iam-todo-4.png)
 
 For the final step, you'll be reviewing the information you've just entered. Simply press 'Create User' to create your user in an instant. There you go, here's our brand new user, the access key, and the secret key - we'll use this. 
 
-![IAM Add User](/assets/iam-todo-5.png)
+![IAM Add User](/assets/aws-cli/iam-todo-5.png)
 
 **Just to make it clear again - the secret key will only be available to you once. If you don't save it instantly, it'll be unavailable. So, for safe-keeping purposes, download the CSV file and save it somewhere safe and secure.**
 
@@ -97,7 +97,7 @@ Copy both the access key and the secret key, and let's head back to the console.
 * **Default Region:** Choose which region you want to use as your default. You will need to enter the region code, e.g. ap-southeast-1 for Singapore (which I'm using actively)
 * **Default Output Format:** This defines how responses from AWS will be displayed. JSON, Text and Table are available. Choose JSON.
 
-![IAM Add User](/assets/configure-profile-2.png)
+![IAM Add User](/assets/aws-cli/configure-profile-2.png)
 
 # Testing your Credentials
 
@@ -105,7 +105,7 @@ There ya go - your profile is all set up. Before you hastily move on to running 
 
 You will be shown your User ID, your account information, and finally your ARN.
 
-![Caller Identity](/assets/caller-identity.png)
+![Caller Identity](/assets/aws-cli/caller-identity.png)
 
 That's it. You've setup your AWS CLI user! Woohoo!
 
@@ -115,35 +115,35 @@ There's load of options available for you to make use of. Simply enter **_aws he
 
 Here's the general format of an AWS CLI command: 
 
-![CLI Commands](/assets/aws-cli-command.png)
+![CLI Commands](/assets/aws-cli/aws-cli-command.png)
 
 If you need help against a particular command, simply run: 
 
-![CLI Commands](/assets/aws-command-help.png)
+![CLI Commands](/assets/aws-cli/aws-command-help.png)
 
 # Example Commands
 
 Let's say you want to list your buckets in S3. You can run the command **_aws s3 ls_** to get your bucket list.
 
-![Command Error](/assets/command-error.png)
+![Command Error](/assets/aws-cli/command-error.png)
 
 Oops, that doesn't seem to work. What's the issue here? 
 
 Well, we didn't run 'aws configure' with the default profile. We ran it with our 'personal' profile. So, whatever commands you're going to run, it's going to need the '--profile personal' parameter with it. Let's retry our command: 
 
-![S3 Command](/assets/s3-command.png)
+![S3 Command](/assets/aws-cli/s3-command.png)
 
 Let's run the 'cp' command to copy a file from our local directory to the S3 bucket we'll specify. Here's the command for that: 
 
-![S3 Command](/assets/s3-cp.png)
+![S3 Command](/assets/aws-cli/s3-cp.png)
 
 It shows we've just uploaded the file successfully - so you're done with that! You can head over to your S3 bucket to verify the presence of the file. Similarly, use the **_sync_** command to run sync all local files with the bucket (or vice versa, simply shift the source and destination parameters)
 
-![S3 Command](/assets/s3-sync.png)
+![S3 Command](/assets/aws-cli/s3-sync.png)
 
 Here are a few more commands you can run (this is just a small subset, the actual command listing is HUGE!):
 
-![Commands](/assets/more-commands.png)
+![Commands](/assets/aws-cli/more-commands.png)
 
 ## A Little More Help
 
