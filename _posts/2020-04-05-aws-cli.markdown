@@ -3,7 +3,7 @@ layout: post
 title:  "Introduction to the AWS CLI"
 date:   2020-04-05 01:00:00 +0500
 description: This is my awesome writeup of this fantastic thing
-categories: cloud
+categories: cloud aws cli
 ---
 
 In today's blog, we'll be discussing the **Amazon Web Services (AWS) CLI**, which we can use to do an array of tasks by the help of our command line!
