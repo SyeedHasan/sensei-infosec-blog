@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  "Reviews on 'Snowden'"
+title:  "Views on 'Snowden'"
 date:   2020-04-01 07:00:00 +0500
 categories: movie-reviews snowden 
 ---
 
 ![Movie Poster](/assets/review-snowden/spy-2.jpg)
-
 
 The documentary revolves around the NSA whistle-blower, **Edward Snowden**, who was accused of leaking NSA’s sensitive documents to the media in 2013. It has several moments where the actor is shown having a sense of confusion in between choosing to conduct surveillance within ethical/lawful rights and crossing them for the sake of patriotism and preventing state terrorism. But what baffles me is how the state masks unlawful activities behind the same slogan – and that only begs the question, to what extents are our laws being broken?
 

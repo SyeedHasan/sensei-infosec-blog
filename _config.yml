@@ -28,7 +28,7 @@ twitter_username: syedhasan009
 github_username:  SyeedHasan
 
 # Build settings
-theme: minima
+theme: jekyll-athena
 plugins:
   - jekyll-feed
 
