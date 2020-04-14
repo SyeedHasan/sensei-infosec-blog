@@ -66,6 +66,8 @@ The data is first run through the **Custom Rules Engine (CRE)** which is the fir
 
 The event processors are also responsible for streaming live data to the console. This is immediately available on the "Log Activity" section of the QRadar console. These events aren't replayed from the database but are operated on in a real-time fashion. However, they're also stored later for persistence. 
 
+![Console](/assets/qradar-architecture/console.png)
+
 There's one other level of abstraction we've left out before and that's **the Magistrate**. The CRE's don't pass out matched events directly to the console. They're sent to the Magistrate on the QRadar console, which creates and manages offenses on the console. It has three main tasks:
 
 - Offense Rules: What to do when an offense has generated?
