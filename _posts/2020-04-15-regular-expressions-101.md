@@ -39,7 +39,7 @@ Let's check them out in action. **Wait, where do you test regular expressions?**
 Now that it's clear how, let's see what I mean by using anchors: 
 
 | ^Quick | Match a string starting with 'Quick'  |
-| Hero$ | Match a string ending with 'The'|
+| Hero$ | Match a string ending with 'Hero'|
 | ^Dog$ | Match the exact string 'Dog' |
 | lazy | Match ANY string that has 'lazy' in it |
 | ^Quick brown fox$ | Match a phrase that has the string 'Quick brown fox' in it |
