@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "IBM QRadar SIEM: The Architecture!"
+title: "IBM QRadar: The Architecture!"
 date: 2020-04-14 15:20:00 +0500
 categories: siem ibm-qradar
 ---
