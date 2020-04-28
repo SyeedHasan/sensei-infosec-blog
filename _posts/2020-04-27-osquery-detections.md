@@ -149,7 +149,7 @@ Here's how you can get the process name, port, and PID, for processes listening 
 
 # Conclusion
 
-There's loads of other examples and use-cases. We'll pick this article up in our next discussion on detecting more sophisticated malware, backdoors, and shells using osquery. 
+There's loads of other examples and use-cases. Using osquery for forensics is a great option. You can even use Kolide, which is built upon osquery, and can be used to manage an array of computers. We'll pick this article up in our next discussion on detecting more sophisticated malware, backdoors, and shells using osquery. 
 
 That's it for today folks. See you in the next article! 
 
