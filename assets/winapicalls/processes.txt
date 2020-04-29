@@ -1,0 +1,7 @@
+EnumThreadWindows
+CreateThread
+GetCurrentThreadId
+GetCurrentThread
+
+
+GetProcessHeap

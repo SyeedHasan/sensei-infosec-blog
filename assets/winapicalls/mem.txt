@@ -1,0 +1,5 @@
+HeapReAlloc
+HeapAlloc
+GlobalAlloc
+TlsAlloc
+CheckTokenMembership
