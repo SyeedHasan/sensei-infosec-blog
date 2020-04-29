@@ -113,7 +113,7 @@ Let's uncomment the packs we do have and see if we can get them to work. Here's 
 
 ![osquery-options](/assets/osquery-detection/Screenshot_6.png)
 
-That's it for the configuration folks. If you'd like to read more about the configuratio in osquery, you can use this link: [osquery-configuration]{:tagret="_blank"}
+That's it for the configuration folks. If you'd like to read more about the configuratio in osquery, you can use this link: _[osquery-configuration]{:tagret="_blank"}_
 
 # Ad-Hoc Queries Using osqueryi
 
