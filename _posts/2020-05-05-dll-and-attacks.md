@@ -32,6 +32,8 @@ Fairly simple search order right?
 
 What if I replace a legitimate DLL which comes up at the fourth point, with a malicious DLL at the first point? My program will look for the DLL but find my malicious DLL before the legitimate one. I can run whatever I want via this DLL file! 
 
+![DLL Hijacking](/assets/dll-attacks/hijacking.png)
+
 The attacker would usually identify an application which suffers from this vulnerability - DLL's are loaded without a fully qualified path. Then, incite the user to open an application which can trigger the loading of a malicious DLL, and the actor's goals being met.
 
 How does one go about finding such vulnerable DLLs?
@@ -47,6 +49,8 @@ Generate a malicious DLL using Metasploit with a reverse-shell payload, place it
 Using AppInit DLLs, you can load custom DLLs to be loaded into the address space of every possible process. This is mostly used to hook into the system API and implement alternate functionality - but often used by malware to load malicious DLLs. 
 
 If a DLL is loaded from here, it'll run under the context of that process and can be used to acquire persistence and privilege escalation. Though by default, the AppInit_DLLs are disabled on latest Windows to avoid this mal-behavior.
+
+![DLL Injection](/assets/dll-attacks/injection.jpg)
 
 The **LoadAppInit_DLLs** setting decides where AppInit_DLLs are utilized or not. A '0' by default suggests the feature is disabled. If enabled, you can set a custom DLL over at the AppInit_DLLs registry key and load your malicious DLL alongside every other user-mode process (since user32.dll will load these DLLs if the value is enabled).
 
