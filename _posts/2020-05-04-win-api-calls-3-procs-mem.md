@@ -114,4 +114,4 @@ For the content of the buffer to actually be copied to the destination in the me
 
 # Conclusion
 
-That's it for today folks. I've brused up on some of the most prominent API calls for memory and process listing. Practice these, and make sure you understand their use-cases for when we finally head to malware analysis. 
+That's it for today folks. I've brushed up on some of the most prominent API calls for memory and process listing. Practice these, and make sure you understand their use-cases for when we finally head to malware analysis. 
