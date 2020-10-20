@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "Command-line Auditing on Windows: Why You Need It!"
 date: 2020-10-16 04:00:00 +0500
 categories: forensics windows command-prompt
 ---
