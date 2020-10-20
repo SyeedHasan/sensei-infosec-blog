@@ -71,3 +71,5 @@ Before the selection of the executable, you can also select the entities you wis
 
 ## Conclusion
 That’s it for this article. Process creation and command-line auditing is definitely a mandatory for all environments. Though the decision to do so comes with its own issues — the most significant being the size and nature of these logs (abundant in nature). If it’s viable for you to do so, the decision will be fruitful in case of incidents or investigations.
+
+Credits for the tables and helpful statistics related to the commands go to JPCERT for their awesome research!
